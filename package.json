@@ -4,7 +4,10 @@
   "description": "Concatenate all bower components in a single file by dependency order.",
   "homepage": "https://github.com/debackerl/bowercater/",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "bin": {
+    "bowercater": "./index.js"
+  },
   "dependencies": {
     "minimist": "^1.2.0",
     "read-components": "^0.7.0"
