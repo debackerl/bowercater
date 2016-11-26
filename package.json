@@ -1,0 +1,27 @@
+{
+  "name": "bowercater",
+  "author": "Laurent Debacker",
+  "description": "Concatenate all bower components in a single file by dependency order.",
+  "homepage": "https://github.com/debackerl/bowercater/",
+  "license": "MIT",
+  "version": "1.0.0"
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "read-components": "^0.7.0"
+  },
+  "keywords": [
+    "bower",
+    "bundle"
+  ],
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "Laurent Debacker",
+      "email": "debackerl gmail com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debackerl/bowercater.git"
+  }
+}
