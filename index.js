@@ -10,12 +10,12 @@ function fatal(err, msg) {
 }
 
 function printUsage() {
-	console.log(`Usage: ${process.argv[0]} [-d <project-dir>] [-e <extension>] <output-file>`);
+	console.log(`Usage: ${process.argv[1]} [-d <project-dir>] [-e <extension>] <output-file>`);
 	console.log('Concatenate all bower components in a single file by dependency order.');
 	console.log('');
 	console.log('Arguments:');
 	console.log('  -d <project-dir>  Directory containing bower.json file (optional, default: current directory)');
-	console.log('  -e <extension>    Extension of files to concatenate (optional, default: js)');
+	console.log('  -e <extension>    Extension of files to concatenate (optional, default: "js")');
 	console.log('  <output-file>     File to generate ("-" for standard output)');
 }
 
@@ -77,7 +77,9 @@ FileGenerator.prototype.appendFile = function(index) {
 		});
 
 		inputFile.on('end', () => {
-			this.appendFile(index + 1);
+			this.outputFile.write('\n', () => {
+				this.appendFile(index + 1);
+			});
 		});
 	}
 };
